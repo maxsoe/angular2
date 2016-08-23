@@ -17,7 +17,8 @@ var AppComponent = (function () {
     }
     AppComponent.prototype.getHeroes = function () {
         var _this = this;
-        this.heroService.getHeroes().then(function (heroes) { return _this.heroes = heroes; });
+        // this.heroService.getHeroes().then(heroes => this.heroes = heroes);
+        this.heroService.getHeroesSlowly().then(function (heroes) { return _this.heroes = heroes; });
     };
     AppComponent.prototype.ngOnInit = function () {
         this.getHeroes();
