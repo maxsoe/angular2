@@ -11,7 +11,6 @@ import { HeroDetailComponent }  from './hero-detail.component';
 
 import { HeroService }  from './hero.service';
 
-
 @NgModule({
   imports: [
     BrowserModule,
@@ -24,6 +23,10 @@ import { HeroService }  from './hero.service';
     DashboardComponent,
     HeroDetailComponent
   ],
+  providers: [
+    HeroService
+  ],
   bootstrap: [ AppComponent ]
 })
-export class AppModule { }
+export class AppModule {
+}
